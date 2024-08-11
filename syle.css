@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --primary: hsl(0, 0%, 100%);
+    --secondary: hsl(275, 100%, 97%);
+    --tertiary: hsl(292, 16%, 49%);
+    --quaternary: hsl(292, 42%, 14%);
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Work Sans", sans-serif;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.desktop{
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+.mobile{
+    display: none;
+}
+.card{
+    max-width: 33%;
+    /* min-width: 20%; */
+    height: auto;
+    background-color: var(--primary);
+    position: absolute;
+    border: none;
+    border-radius: 15px;
+    padding: 0rem 2rem;
+    box-shadow: 0px 20px 200px -60px var(--tertiary);
+}
+.head{
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.head h1{
+    font-weight: 700;
+    font-size: 3rem;
+}
+.head img{
+    width: 35px;
+}
+.minus{
+    display: none;
+}
+.question{
+    align-items: start;
+    display: flex;
+    justify-content: space-between;
+
+}
+h4{
+    cursor: pointer;
+}
+h4:hover{
+    color: hsl(292, 83%, 47%);
+}
+
+p {
+    color: var(--tertiary);
+    font-size: 15px;
+    overflow: hidden;
+    /* transition:0.5s ease; */
+    line-height: 25px;
+}
+.questions-answers{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 35px 7px;
+}
+@media (max-width:1100px){
+.desktop{
+    display: none;
+}
+.mobile{
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+.card{
+    max-width:100%;
+}
+} 
+@media (max-width:650px){
+    .card{
+        max-width:80%;
+    }
+    .questions-answers{
+        gap: 50px;
+    }
+}
